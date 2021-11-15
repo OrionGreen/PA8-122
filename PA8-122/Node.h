@@ -27,16 +27,16 @@ public:
 	//setters
 	void setData(string& const newData);
 	void setpLeft(Node* const newPtr);
-	void setpRight(Node* const newptr);
+	void setpRight(Node* const newPtr);
 
 	//getters
 	string getData() const;
-	Node*& getpLeft() const;
-	Node*& getpRight() const;
+	Node* getpLeft() const;
+	Node* getpRight() const;
 
 	virtual void printData() = 0;
 
-private:
+protected:
 	string mData;
 	Node* mpLeft;
 	Node* mpRight;
