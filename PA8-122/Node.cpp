@@ -26,11 +26,11 @@ string Node::getData() const {
 	return this->mData;
 }
 
-Node* Node::getpLeft() const {
-	return this->mpLeft;
+Node*& Node::getpLeft() {
+	return mpLeft;
 }
 
-Node* Node::getpRight() const {
-	return this->mpRight;
+Node*& Node::getpRight() {
+	return mpRight;
 }
 

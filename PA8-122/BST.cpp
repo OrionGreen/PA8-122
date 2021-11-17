@@ -19,16 +19,16 @@ void BST::inOrderTraversal() {
 	inOrderTraversal(this->mpRoot);
 }
 TransactionNode& BST::findSmallest() {
-	TransactionNode* smallest;
+	TransactionNode* smallest = dynamic_cast<TransactionNode*>(this->getmpRoot());
 	while (smallest->getpLeft() != nullptr) {
-		smallest->getpLeft();
+		smallest = dynamic_cast<TransactionNode*>(smallest->getpLeft());
 	}
 	return *smallest;
 }
 TransactionNode& BST::findLargest() {
-	TransactionNode* biggest;
+	TransactionNode* biggest = dynamic_cast<TransactionNode*>(this->getmpRoot());
 	while (biggest->getpRight() != nullptr) {
-		biggest->getpRight()
+		biggest = dynamic_cast<TransactionNode*>(biggest->getpRight());
 	}
 	return *biggest;
 }
@@ -42,7 +42,7 @@ void BST::chopTree(Node* pTree) {
 		delete pTree;
 	}
 }
-void BST::insert(Node* pTree, const int units, const string& name) {
+void BST::insert(Node*& pTree, const int units, const string& name) {
 	if (pTree == nullptr)
 	{
 		Node* pMem = new TransactionNode(name, units);

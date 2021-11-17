@@ -5,7 +5,9 @@ class TransactionNode :
     public Node
 {
 public:
-    TransactionNode(const string& newData, const int newUnits) : Node(newData) {}
+    TransactionNode(const string& newData = "", const int newUnits = 0) : Node(newData) {
+        this->mUnits = newUnits;
+    }
     ~TransactionNode();
 
     //setters

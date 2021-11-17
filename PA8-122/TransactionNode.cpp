@@ -1,9 +1,5 @@
 #include "TransactionNode.h"
 
-TransactionNode::TransactionNode(const string& newData, const int newUnits) : Node(newData){
-	this->mUnits = newUnits;
-}
-
 TransactionNode::~TransactionNode() {
 }
 void TransactionNode::setUnits(const int newUnits) {

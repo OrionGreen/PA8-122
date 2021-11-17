@@ -31,8 +31,8 @@ public:
 
 	//getters
 	string getData() const;
-	Node* getpLeft() const;
-	Node* getpRight() const;
+	Node*& getpLeft();
+	Node*& getpRight();
 
 	virtual void printData() = 0;
 

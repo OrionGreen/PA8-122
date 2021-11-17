@@ -15,7 +15,7 @@ public:
 
 private:
 	void chopTree(Node* pTree);
-	void insert(Node* pTree, const int units, const string& name);
+	void insert(Node*& pTree, const int units, const string& name);
 	void inOrderTraversal(Node*pTree);
 	
 
