@@ -42,6 +42,7 @@ void BST::chopTree(Node* pTree) {
 		delete pTree;
 	}
 }
+
 void BST::insert(Node*& pTree, const int units, const string& name) {
 	if (pTree == nullptr)
 	{
